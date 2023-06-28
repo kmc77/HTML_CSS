@@ -1,46 +1,75 @@
 <!DOCTYPE html>
 <html>  
   <head>  
-    <title>CSS3 clear Basic</title>
+    <title>리스트로 메뉴 만들기</title>
     <meta charset="utf-8">
-    <style>  
-    header {
-    		background-color: #B3C890;
-    		text-align: center;
-    		font-size: 14px;
-    		font-weight: bold;
-    		margin: 0.5em
-   			}
-   			 
-   		
-   		#Home {
-   		
-   			
-   			}
-   			 
-    	li {
-    		list-style-type: none; /* 목록 마커의 종류를 지정해 주는 속성으로 마커를 사용하지 않음 */
-    		float: right; /*위치 왼쪽*/
-    		padding: 20px 20px;
-    		width: 100px;
-    		text-align: center;
-    		}
-   
-   	h1 > p {list-style-type: circle}
+    <style> 
+    body {
+    		margin: 0;
+    	}
     	
-    li:nth-child {
-    	float: right;
-    	background-color : green;
-    	clear:right; 
-   	 	}
-   	 	
-   	 p {
-   	 	
-   	 	clear: left;
-   	 	margin-left: 50px
-   	 	
-   	 	}	
+    header {
+    		background: #808000a8;
+    		height: 3rem;
+    		line-height:50px;
+    		line-height: 3rem;
+    		text-align: center;
+   			}
+   	nav {
+   		background: olive;
+   		height: 50px;
+   	}		
+   			
+   	nav > ul {  /*ul 이 갖고 있는 기본 여백을 없어요 */
+   			margin: 0;
+   	}
+   	
+   	nav > ul > li {		
+   			display : inline;
+   			list-style-type: none; /*마커 삭세 */
+   			padding: 0px 15px;
+ 	}	
    
+	nav > ul > li > a {		
+   			color: white;
+   			font-size: 20px;
+   			line-height: 50px;
+   			text-decoration: none;  /* 밑줄 없애요 */
+ 	}	
+ 	
+ 	nav > ul > li > a:hover {		
+    		color: #ffc107; /* 마우스 올릴 때 색상 */
+    }
+    
+    article p::before {
+    		content: '▶'
+    }
+    
+    aside {
+    	float:right; 
+    	width:40%;
+    	background: lime;
+    	height:500px;	
+    	font-size: 2rem;
+    }
+    
+    article {
+    	float:right; 
+    	width:60%;
+    	background: orange;
+    	padding: 0px 5%;
+    	height:500px;	
+    	box-sizing: border-box
+    }
+   				 
+ 	 footer {
+  		clear:both; 
+  		text-align: center;
+    	background: green;
+    	height:50px;	
+    	line-height: 50px;
+ 	}
+  			
    		</style>	   	
   </head>
   <body>
